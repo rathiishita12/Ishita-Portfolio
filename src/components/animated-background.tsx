@@ -539,6 +539,7 @@ const AnimatedBackground = () => {
           tweens.push(t);
         });
     };
+    
     const stop = () => {
       removePrevTweens();
       Object.values(SKILLS).forEach((skill) => {

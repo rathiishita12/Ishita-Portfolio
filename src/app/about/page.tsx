@@ -27,8 +27,9 @@ import {
   SiExpress,
   SiJavascript,
   SiKubuntu,
+  SiPython,
   SiPm2,
-  SiPrettier,
+  SiTensorflow,
   SiTypescript,
   SiVercel,
   SiVisualstudiocode,
@@ -43,31 +44,37 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "abhijitzende75@gmail",
-    href: "mailto:abhijitzende75@gmail.com",
+    content: "ms.ishita.rathi@gmail.com",
+    href: "mailto:ms.ishita.rathi@gmail.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
     name: "Phone",
     content: "1234567890",
-    href: "tel:8308509180",
+    href: "tel:9305746556",
     icon: <FaPhone height={"50px"} />,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/zende-abhijit/",
-    content: "/zende-abhijit",
+    href: "https://www.linkedin.com/in/rathiishita24/",
+    content: "/rathiishita24",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/Abhiz2411",
-    content: "/naresh-khatri",
+    href: "https://github.com/rathiishita12",
+    content: "/rathiishita12",
     icon: <FaGithub height={"50px"} />,
   },
 ];
 
 const TOOLS = [
+  {
+    name: "Python",
+    content: "Python is a high-level, interpreted programming language",
+    icon: <SiPython size={"50px"} color={"#3776AB"} />,
+    color: "#3776AB",
+  },
   {
     name: "JavaScript",
     content: "JavaScript is a high-level, interpreted programming language",
@@ -177,10 +184,10 @@ const TOOLS = [
     color: "#000000",
   },
   {
-    name: "Prettier",
-    content: "Next.js is a React framework for production",
-    icon: <SiPrettier size={"50px"} color="#f7b93c" />,
-    color: "#f7b93c",
+    name: "Machine Learning",
+    content: "Teaching computers to recognize patterns and make decisions.",
+    icon: <SiTensorflow size={"50px"} color="#FF6F00" />,
+    color: "#FF6F00",
   },
   {
     name: "NPM",

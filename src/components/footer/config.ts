@@ -1,11 +1,19 @@
 const footer: { title: string; href: string }[] = [
   {
-    title: "Blog",
-    href: "https://abhijitzende.hashnode.dev/",
+    title: "Resume",
+    href: "https://drive.google.com/file/d/1lSLDFpGTN-Fqk2EpBswEcpnHMwetElq5/view?usp=drive_link",
   },
   {
-    title: "Newsletter",
-    href: "https://abhijitzende.hashnode.dev/",
+    title: "Projects",
+    href: "#projects",
+  },
+  {
+    title: "Skills",
+    href: "#skills",
+  },
+  {
+    title: "Contact",
+    href: "#contact",
   },
 ];
 

@@ -5,7 +5,9 @@ import { TypographyH3, TypographyP } from "@/components/ui/typography";
 import { ArrowDownUpIcon, ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { title } from "process";
 import { ReactNode } from "react";
+import { FaAws } from "react-icons/fa6";
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
 import {
   SiChakraui,
@@ -292,6 +294,47 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiArduino/>,
   },
+  flask: {
+  title: "Flask",
+  bg: "black",
+  fg: "white",
+  icon: <img src="/assets/icons/flask.svg" alt="Flask" />,
+},
+
+tensorflow: {
+  title: "TensorFlow",
+  bg: "black",
+  fg: "white",
+  icon: <img src="/assets/icons/tensorflow.png" alt="TensorFlow" />,
+},
+
+strapi: {
+  title: "Strapi",
+  bg: "black",
+  fg: "white",
+  icon: <img src="/assets/icons/strapi.svg" alt="Strapi" />,
+},
+
+mysql: {
+  title: "MySQL",
+  bg: "black",
+  fg: "white",
+  icon: <img src="/assets/icons/mysql.png" alt="MySQL" />,
+},
+
+aws: {
+  title: "AWS",
+  bg: "black",
+  fg: "white",
+  icon: <FaAws />,
+},
+
+medusa:{
+  title: "Medusa.js",
+  bg:"black",
+  fg:"white",
+  icon: <img src="/assets/icons/medusa.png" alt="Medusa.js" />,
+}
 };
 export type Project = {
   id: string;
@@ -769,306 +812,282 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. AI Docker file optimizer project
-    id: "aidockerfileoptimizer",
-    category: "AI and DevOps",
-    title: "AI Dockerfile Optimizer",
-    src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
-    screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://ai-docker-file-optimizer.netlify.app/",
-    github:"https://github.com/Abhiz2411/AI-Docker-file-optimizer",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.openai,PROJECT_SKILLS.netlify],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller, more efficient images. 
-            Simply paste your Dockerfile, and the app analyzes it for best practices and size 
-            optimization tips. It then provides a refactored, optimized version of the Dockerfile. 
-            Deployed on Vercel, it ensures fast and easy access to Dockerfile optimization.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/aidockerfileoptimizer/1.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/2.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/3.png`,
-            ]}
-          />
-        </div>
-      );
-    },
+  {
+  id: "fiber-optics-frontend",
+  category: "Frontend Development",
+  title: "Fiber Optics - E-Commerce Platform (Frontend)",
+  src: "/assets/projects-screenshots/fiberoptics/frontend-1.png",
+  screenshots: ["frontend-1.png", "frontend-2.png"],
+  live: "https://www.fols.in/in",
+  skills: {
+    frontend: [
+      PROJECT_SKILLS.next,
+      PROJECT_SKILLS.js,
+      PROJECT_SKILLS.tailwind,
+    ],
+    backend: [],
   },
-  { // 02. FinanceMe project
-    id: "financeme",
-    category: "DevOps in Banking and Finance",
-    title: "FinanceMe: Complete DevOps Capstone Project",
-    src: "/assets/projects-screenshots/financeme/1.png",
-    screenshots: ["/assets/projects-screenshots/financeme/1.png"],
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.html,
-        PROJECT_SKILLS.css,
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.bootstrap,
-      ],
-      backend: [
-        PROJECT_SKILLS.java,
-        PROJECT_SKILLS.maven,
-        PROJECT_SKILLS.postgres,
-      ],
-    },
-    live: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    github: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono text-2xl text-center">
-            FinanceMe: Complete DevOps Capstone Project
-          </TypographyP>
-          <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic 
-            architecture to a microservice-based architecture to handle increased traffic and 
-            scaling challenges. The project involves automating infrastructure provisioning, build 
-            and deployment processes, and continuous monitoring using modern DevOps tools and 
-            AWS services.?
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
-          <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
-            3.Continuous Monitoring
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/1.png`,
-              `${BASE_PATH}/financeme/2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
-          <p className="font-mono mb-2">
-          Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/4_A.png`,
-              `${BASE_PATH}/financeme/4.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono">
+          Developed and optimized 15+ responsive pages for an industrial
+          e-commerce platform using Next.js. Integrated Medusa APIs and Strapi CMS
+          to provide seamless product browsing and content management.
+        </TypographyP>
 
-          <p className="font-mono mb-2">
-          Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/5.png`,
-              `${BASE_PATH}/financeme/6.png`,
-              `${BASE_PATH}/financeme/7.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
-          <p className="font-mono mb-2">
-          Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
-          </p>
-          <SlideShow images={[
-                `${BASE_PATH}/financeme/3.png`,
-                `${BASE_PATH}/financeme/8.png`,
-                `${BASE_PATH}/financeme/9.png`,
-                `${BASE_PATH}/financeme/10.png`,
-            ]} />
-        </div>
-      );
-    },
-  },
-  { // 03. Portfolio project
-    id: "portfolio",
-    category: "Portfolio",
-    title: "My Portfolio",
-    src: "/assets/projects-screenshots/myportfolio/landing.png",
-    screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
-    live: "https://www.abhijitzende.com/",
-    github:"https://github.com/Abhiz2411/3D-interactive-portfolio",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.shadcn,
-        PROJECT_SKILLS.aceternity,
-        PROJECT_SKILLS.framerMotion,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.spline,
-      ],
-      backend: [],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Welcome to my digital playground, where creativity meets code in the
-            dopest way possible.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">
-            Beautiful 3D Objects{" "}
-          </TypographyH3>
-          <p className="font-mono mb-2">
-            Did you see that 3D keyboard modal? Yeah! I made that. That
-            interactive keyboard is being rendered in 3D on a webpage 🤯, and
-            pressing each keycap reveals a skill in a goofy way. It&apos;s like
-            typing, but make it art.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 ">Space Theme</TypographyH3>
-          <p className="font-mono mb-2">
-            Dark background + floating particles = out-of-this-world cool.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/myportfolio/navbar.png`]} />
-          <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
+        <ProjectsLinks live={this.live} />
 
-          <p className="font-mono mb-2">
-            My top personal and freelance projects — no filler, all killer.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/projects.png`,
-              `${BASE_PATH}/myportfolio/project.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-8 text-center">
-            This site&apos;s not just a portfolio — it&apos;s a whole vibe.
-          </p>
-        </div>
-      );
-    },
+        <TypographyH3 className="my-4 mt-8">
+          Key Contributions
+        </TypographyH3>
+
+        <ul className="list-disc ml-6 font-mono">
+          <li>Built responsive product catalog and category pages.</li>
+          <li>Integrated Medusa APIs for product management.</li>
+          <li>Connected Strapi CMS for dynamic content updates.</li>
+          <li>Improved page loading performance and SEO.</li>
+        </ul>
+      </div>
+    );
   },
-  { // 04. Smart parking assitant
-    id: "smartparkingassitant",
-    category: "IoT",
-    title: "Smart Parking Assistant",
-    src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
-    screenshots: ["01.jpeg", "03.png"],
-    live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github:"https://github.com/Abhiz2411/smart-parking-assistant",
-    skills: {
-      frontend: [PROJECT_SKILLS.python],
-      backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino 
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI 
-            that visualizes availability and an intelligent system for quick, optimal decisions. 
-            Built to adapt with customizable hardware and Python-powered software for seamless 
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-              `${BASE_PATH}/smartparkingassitant/03.png`,
-              `${BASE_PATH}/smartparkingassitant/04.jpg`,
-            ]}
-          />
-        </div>
-      );
-    },
+},
+{
+  id: "fiber-optics-backend",
+  category: "Backend Development",
+  title: "Fiber Optics - E-Commerce Platform (Backend)",
+  src: "/assets/projects-screenshots/fiberoptics/backend-1.png",
+  screenshots: ["backend-1.png"],
+  live: "https://api.fols.in/app",
+  skills: {
+    frontend: [],
+    backend: [
+      PROJECT_SKILLS.medusa,
+    ],
   },
-  { // 05. Smart Job Tracker project
-    id: "smartjobtracker",
-    category: "Full stack",
-    title: "Smart Job Tracker",
-    src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png","06.png","07.png"],
-    live: "https://job-tracker-application-eight.vercel.app/",
-    github:"https://github.com/Abhiz2411/Job-tracker-application",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.firebase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you 
-            manage, filter, and visualize your job search. Organize your applications with a 
-            Kanban board, monitor progress through status updates, and store everything securely. 
-            Enjoy seamless access across devices with a responsive design and email reminders for 
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartjobtracker/01.png`,
-              `${BASE_PATH}/smartjobtracker/02.png`,
-              `${BASE_PATH}/smartjobtracker/03.png`,
-              `${BASE_PATH}/smartjobtracker/04.png`,
-              `${BASE_PATH}/smartjobtracker/05.png`,
-              `${BASE_PATH}/smartjobtracker/06.png`,
-              `${BASE_PATH}/smartjobtracker/07.png`,
-            ]}
-          />
-        </div>
-      );
-    },
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono">
+          Engineered backend services using Medusa to support product
+          management, quotation requests, RMA workflows, and order processing.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} />
+
+        <ul className="list-disc ml-6 font-mono">
+          <li>Created custom APIs for business workflows.</li>
+          <li>Implemented product and inventory management.</li>
+          <li>Developed quotation request module.</li>
+          <li>Built Return Merchandise Authorization (RMA) functionality.</li>
+        </ul>
+      </div>
+    );
   },
-  { // 06. Savinder Puri portfolio project
-    id: "savinderpurisportfolio",
-    category: "Web Development",
-    title: "Savinder Puri Portfolio",
-    src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png"],
-    live: "https://savinder-puri.vercel.app/",
-    github:"https://github.com/Abhiz2411/savinder-puri",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual 
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey, 
-            milestones, and life-changing services blending tech and spirituality. Built with 
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who 
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/savinderpuriportfolio/01.png`,
-              `${BASE_PATH}/savinderpuriportfolio/02.png`,
-              `${BASE_PATH}/savinderpuriportfolio/03.png`,
-              `${BASE_PATH}/savinderpuriportfolio/04.png`,
-              `${BASE_PATH}/savinderpuriportfolio/05.png`,
-            ]}
-          />
-        </div>
-      );
-    },
+},
+{
+  id: "fiber-optics-cms",
+  category: "CMS Development",
+  title: "Fiber Optics - Content Management System",
+  src: "/assets/projects-screenshots/fiberoptics/cms-1.png",
+  screenshots: ["cms-1.png"],
+  live: "https://cms.fols.in/admin",
+  skills: {
+    frontend: [],
+    backend: [
+      PROJECT_SKILLS.strapi,
+    ],
   },
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono">
+          Configured and customized Strapi CMS to manage content across multiple
+          sections of the Fiber Optics e-commerce platform.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} />
+
+        <ul className="list-disc ml-6 font-mono">
+          <li>Designed content structures and collections.</li>
+          <li>Enabled non-technical teams to manage content.</li>
+          <li>Created scalable content workflows.</li>
+          <li>Integrated CMS with Next.js frontend.</li>
+        </ul>
+      </div>
+    );
+  },
+},
+{
+  id: "hindi-ocr",
+  category: "Deep Learning",
+  title: "Hindi OCR Character Classifier",
+  src: "/assets/projects-screenshots/hindiocr/1.png",
+  screenshots: ["1.png"],
+  github: "https://github.com/rathiishita12/AksharAI",
+  live: "https://github.com/rathiishita12/AksharAI",
+  skills: {
+    frontend: [],
+    backend: [
+      PROJECT_SKILLS.python,
+      PROJECT_SKILLS.tensorflow,
+    ],
+  },
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono">
+          Developed a CNN-based Optical Character Recognition (OCR) system for
+          recognizing Hindi characters using deep learning techniques.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <TypographyH3 className="my-4 mt-8">
+          Model Architecture
+        </TypographyH3>
+
+        <ul className="list-disc ml-6 font-mono">
+          <li>Conv2D layers for feature extraction.</li>
+          <li>Batch Normalization for training stability.</li>
+          <li>Max Pooling layers for dimensionality reduction.</li>
+          <li>Data augmentation to improve generalization.</li>
+        </ul>
+      </div>
+    );
+  },
+},
+{
+  id: "nirdeshika",
+  category: "Machine Learning",
+  title: "Nirdeshika - Career Guidance System",
+  src: "/assets/projects-screenshots/nirdeshika/1.png",
+  screenshots: ["1.png", "2.png", "3.png", "4.png"],
+  live: "https://nirdeshika.vercel.app/",
+  github: "https://github.com/rathiishita12/nirdeshika",
+  skills: {
+    frontend: [
+      PROJECT_SKILLS.next,
+      PROJECT_SKILLS.js,
+    ],
+    backend: [
+      PROJECT_SKILLS.python,
+      PROJECT_SKILLS.mysql,
+    ],
+  },
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono">
+          Career recommendation platform built using a dataset containing over
+          400,000 job records to help users discover suitable career paths.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <SlideShow
+          images={[
+            `${BASE_PATH}/nirdeshika/1.png`,
+            `${BASE_PATH}/nirdeshika/2.png`,
+            `${BASE_PATH}/nirdeshika/3.png`,
+            `${BASE_PATH}/nirdeshika/4.png`,
+          ]}
+        />
+
+        <ul className="list-disc ml-6 font-mono">
+          <li>Analyzed 400,000+ job records.</li>
+          <li>Generated career recommendations using ML.</li>
+          <li>Implemented data processing pipelines.</li>
+          <li>Created interactive visualizations and insights.</li>
+        </ul>
+      </div>
+    );
+  },
+},
+// {
+//   id: "stock-market-prediction",
+//   category: "Artificial Intelligence",
+//   title: "Stock Market Prediction Website",
+//   src: "/assets/projects-screenshots/stockprediction/1.png",
+//   screenshots: ["1.png", "2.png", "3.png"],
+//   github: "https://github.com/rathiishita12/Stock-Market-Prediction",
+//   live: "https://github.com/rathiishita12/Stock-Market-Prediction",
+//   skills: {
+//     frontend: [
+//       PROJECT_SKILLS.html,
+//       PROJECT_SKILLS.css,
+//       PROJECT_SKILLS.js,
+//     ],
+//     backend: [
+//       PROJECT_SKILLS.python,
+//       PROJECT_SKILLS.flask,
+//     ],
+//   },
+//   get content() {
+//     return (
+//       <div>
+//         <TypographyP className="font-mono">
+//           AI-powered stock market prediction platform that utilizes LSTM neural
+//           networks to forecast stock prices using historical market data.
+//         </TypographyP>
+
+//         <ProjectsLinks live={this.live} repo={this.github} />
+
+//         <ul className="list-disc ml-6 font-mono">
+//           <li>Implemented LSTM-based forecasting model.</li>
+//           <li>Integrated Alpha Vantage APIs for stock data.</li>
+//           <li>Integrated News APIs for market insights.</li>
+//           <li>Visualized stock trends and predictions.</li>
+//         </ul>
+//       </div>
+//     );
+//   },
+// },
+{
+  id: "e-krishi",
+  category: "Full Stack Development",
+  title: "e-Krishi - Farmer Marketplace Platform",
+  src: "/assets/projects-screenshots/ekrishi/1.png",
+  screenshots: ["1.png", "2.png", "3.png"],
+  github: "https://github.com/rathiishita12/E-krishi",
+  live: "https://github.com/rathiishita12/E-krishi",
+  skills: {
+    frontend: [
+      PROJECT_SKILLS.html,
+      PROJECT_SKILLS.css,
+      PROJECT_SKILLS.js,
+      PROJECT_SKILLS.bootstrap,
+    ],
+    backend: [
+      PROJECT_SKILLS.python,
+      PROJECT_SKILLS.mongo,
+    ],
+  },
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono">
+          Full-stack agricultural marketplace connecting farmers directly with
+          buyers while providing intelligent crop recommendations and AI-powered
+          assistance.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <TypographyH3 className="my-4 mt-8">
+          Features
+        </TypographyH3>
+
+        <ul className="list-disc ml-6 font-mono">
+          <li>Farmer-to-buyer marketplace.</li>
+          <li>Crop recommendation system.</li>
+          <li>User authentication and profile management.</li>
+          <li>AI chatbot for agricultural guidance.</li>
+          <li>Product listing and transaction modules.</li>
+        </ul>
+      </div>
+    );
+  },
+},
 ];
 export default projects;

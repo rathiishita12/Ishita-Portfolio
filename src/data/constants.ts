@@ -4,9 +4,9 @@ export enum SkillNames {
   // AZURE = "azure",    // +
   LINUX = "linux",    
   // SHELL = "shell",    // +
-  // PYTHON = "python",  // +
+  PYTHON = "python", 
   GIT = "git",
-  DOCKER = "docker",
+  STRAPI = "strapi",
   // SELENIUM = "selenium",  // +
   // JENKINS = "jenkins",    // +
   // KUBERNETES = "kubernetes",  // +
@@ -22,23 +22,24 @@ export enum SkillNames {
   HTML = "html",
   CSS = "css",
   JS = "js",
+  BOOTSTRAP = "bootstrap",
   // JAVA = "java",    // +
   POSTGRES = "postgres",
-  TS = "ts",         //
+  //TS = "ts",         //
   REACT = "react",   //
-  VUE = "vue",       //
+  //VUE = "vue",       //
   NEXTJS = "nextjs", //
   TAILWIND = "tailwind",  //
   NODEJS = "nodejs",  //
   EXPRESS = "express",  // 
   MONGODB = "mongodb",  //
   GITHUB = "github",   //
-  PRETTIER = "prettier",  //
+  ML = "ml",  //
   NPM = "npm",       //
   FIREBASE = "firebase",  //
-  WORDPRESS = "wordpress",  //
-  NGINX = "nginx",      //
-  VIM = "vim",           //
+  POWERBI = "powerbi",  //
+  MYSQL = "mysql",       //
+  MEDUSA = "medusa",       //
   VERCEL = "vercel",    //
 }
 export type Skill = {
@@ -50,18 +51,18 @@ export type Skill = {
   icon: string;
 };
 export const SKILLS: Record<SkillNames, Skill> = {
-  [SkillNames.JS]: {
+  [SkillNames.PYTHON]: {
     id: 1,
-    name: "js",
-    label: "JavaScript",
-    shortDescription: "yeeting code into the DOM since '95, no cap! 💯🚀",
-    color: "#f0db4f",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    name: "python",
+    label: "Python",
+    shortDescription: "The coding equivalent of 'It just works' — even when you barely know what you're doing. 🐍📜",
+    color: "#61dafb",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
-  [SkillNames.TS]: {
+  [SkillNames.JS]: {
     id: 2,
-    name: "ts",
-    label: "TypeScript",
+    name: "js",
+    label: "Javascript",
     shortDescription:
       "JavaScript's overachieving cousin who's always flexing 💯🔒",
     color: "#007acc",
@@ -92,14 +93,14 @@ using use = useUsing("use")`,
     color: "#61dafb",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
-  [SkillNames.VUE]: {
+  [SkillNames.BOOTSTRAP]: {
     id: 6,
-    name: "vue",
-    label: "Vue",
+    name: "bootstrap",
+    label: "Bootstrap",
     shortDescription:
       "the chill pill for your frontend, it hits different! 🟢😌",
     color: "#41b883",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
   },
   [SkillNames.NEXTJS]: {
     id: 7,
@@ -166,13 +167,13 @@ using use = useUsing("use")`,
     color: "#000000",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
-  [SkillNames.PRETTIER]: {
+  [SkillNames.ML]: {
     id: 15,
-    name: "prettier",
-    label: "Prettier",
-    shortDescription: "making your code not a whole mess, thank u next 🧹✨",
-    color: "#f7b93a",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prettier/prettier-original.svg",
+    name: "ml",
+    label: "ML",
+    shortDescription: "Teaching computers to recognize patterns and make decisions. 🧠🤖",
+    color: "#4285F4",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
   },
   [SkillNames.NPM]: {
     id: 16,
@@ -191,13 +192,13 @@ using use = useUsing("use")`,
     color: "#ffca28",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   },
-  [SkillNames.WORDPRESS]: {
+  [SkillNames.POWERBI]: {
     id: 18,
-    name: "wordpress",
-    label: "WordPress",
-    shortDescription: "the grandpa of CMS, still rocking that cane 🧓👴",
-    color: "#007acc",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+    name: "powerbi",
+    label: "Power BI",
+    shortDescription: "the go-to for data visualization, making spreadsheets look like art! 📊🎨",
+    color: "#f25022",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-plain.svg",
   },
   [SkillNames.LINUX]: {
     id: 19,
@@ -207,20 +208,20 @@ using use = useUsing("use")`,
     color: "#fff",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   },
-  [SkillNames.DOCKER]: {
+  [SkillNames.MYSQL]: {
     id: 20,
-    name: "docker",
-    label: "Docker",
-    shortDescription: "The best containerization! 🐳🔥",
-    color: "#2496ed",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    name: "mysql",
+    label: "MySQL",
+    shortDescription: "The OG relational database, still holding it down! �💾",
+    color: "#00758f",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
-  [SkillNames.NGINX]: {
+  [SkillNames.MEDUSA]: {
     id: 21,
-    name: "nginx",
-    label: "NginX",
-    shortDescription: "reverse proxy go zoom zoom, sheesh! 🚗💨",
-    color: "#008000",
+    name: "medusa",
+    label: "Medusa",
+    shortDescription: "the headless commerce engine, turning e-commerce into a breeze! 🌬️🛒",
+    color: "#fff",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
   },
   [SkillNames.AWS]: {
@@ -232,13 +233,13 @@ using use = useUsing("use")`,
     color: "#ff9900",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg",
   },
-  [SkillNames.VIM]: {
+  [SkillNames.STRAPI]: {
     id: 23,
-    name: "vim",
-    label: "Vim",
-    shortDescription: "exit? In this economy? Ight, imma head out! 🚪🏃",
-    color: "#e34c26",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg",
+    name: "strapi",
+    label: "Strapi",
+    shortDescription: "the headless CMS that’s a breeze to use! 🌬️📦",
+    color: "#fff",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/strapi/strapi-original.svg",
   },
   [SkillNames.VERCEL]: {
     id: 24,
@@ -250,7 +251,6 @@ using use = useUsing("use")`,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
   },
 };
-
 
 // +
 // export const SKILLS: Record<SkillNames, Skill> = {
