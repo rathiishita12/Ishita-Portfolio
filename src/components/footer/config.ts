@@ -1,7 +1,7 @@
 const footer: { title: string; href: string }[] = [
   {
     title: "Resume",
-    href: "https://drive.google.com/file/d/1lSLDFpGTN-Fqk2EpBswEcpnHMwetElq5/view?usp=drive_link",
+    href: "https://drive.google.com/file/d/1CeKdxvZl0-eTmUCCLjp-YKtdQ7jt28Oa/view?usp=drive_link",
   },
   {
     title: "Projects",
