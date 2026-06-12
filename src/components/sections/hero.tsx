@@ -18,14 +18,15 @@ const HeroSection = () => {
   const { isLoading } = usePreloader();
 
   return (
-    <section id="hero" className={cn("relative w-full h-screen")}>
+    <section id="hero" className={cn("relative w-full h-screen pointer-events-none")}>
       <div className="grid md:grid-cols-2">
         <div
           className={cn(
             "h-[calc(100dvh-3rem)] md:h-[calc(100dvh-4rem)] z-[2]",
             "col-span-1",
             "flex flex-col justify-start md:justify-center items-center md:items-start",
-            "pt-28 sm:pt-0 sm:pb-32 md:p-24 lg:p-40 xl:p-48"
+            "pt-28 sm:pt-0 sm:pb-32 md:p-24 lg:p-40 xl:p-48",
+            "pointer-events-auto"
           )}
         >
           {!isLoading && (
@@ -134,7 +135,7 @@ const HeroSection = () => {
         </div>
         <div className="grid col-span-1"></div>
       </div>
-      <div className="absolute bottom-10 left-[50%] translate-x-[-50%]">
+      <div className="absolute bottom-10 left-[50%] translate-x-[-50%] pointer-events-auto">
         <ScrollDownIcon />
       </div>
     </section>

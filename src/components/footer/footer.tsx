@@ -13,7 +13,7 @@ function Footer() {
         © {year} {config.author}. All rights reserved.
       </p>
       <SocialMediaButtons />
-      <nav className="flex gap-4 sm:gap-6 z-10">
+      <nav className="flex flex-wrap justify-center gap-1 sm:gap-6 z-10">
         {footer.map((link, index) => {
           const { title, href } = link;
 
@@ -23,7 +23,9 @@ function Footer() {
               href={href}
               key={`l_${index}`}
             >
-              <Button variant={"link"}>{title}</Button>
+              <Button variant={"link"} className="h-auto p-1 sm:h-10 sm:px-4 sm:py-2 text-xs">
+                {title}
+              </Button>
             </Link>
           );
         })}

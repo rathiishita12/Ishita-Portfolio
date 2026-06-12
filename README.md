@@ -9,7 +9,7 @@ This portfolio showcases my journey as a Frontend Developer, highlighting my pro
 Add your deployed portfolio link here:
 
 ```text
-https://your-portfolio-link.vercel.app
+https://ishita-rathi-portfolio.vercel.app/
 ```
 
 ## 📸 Portfolio Preview
@@ -85,69 +85,6 @@ Features detailed information about my major projects including:
 ### Deployment
 
 - Vercel
-
----
-
-## 🌟 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/your-portfolio.git
-```
-
-### 2. Navigate to the project directory
-
-```bash
-cd your-portfolio
-```
-
-### 3. Install dependencies
-
-```bash
-npm install
-```
-
-### 4. Configure environment variables
-
-Create a `.env.local` file in the root directory:
-
-```env
-RESEND_API_KEY=your_resend_api_key
-```
-
-### 5. Start the development server
-
-```bash
-npm run dev
-```
-
-### 6. Open your browser
-
-```text
-http://localhost:3000
-```
-
----
-
-## 🚀 Deployment
-
-This project is deployed on **Vercel** for fast and reliable performance.
-
-### Deploy Your Own Version
-
-1. Fork this repository.
-2. Import the project into Vercel.
-3. Add the required environment variables.
-4. Deploy and enjoy!
-
-### Environment Variables
-
-| Variable       | Description                     |
-| -------------- | ------------------------------- |
-| RESEND_API_KEY | API key for contact form emails |
-
----
 
 ## 👩‍🎓 About Me
 
